@@ -1,0 +1,57 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-99;
+}
+.login-div {
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 20%, rgba(0,0,0,1) 60%);
+    width: 70vw;
+    height: 70vh;
+    max-width: 800px;
+    min-width:400px;
+    max-height:800px;
+    min-hieght: 400px;
+    opacity:.65;
+    clip-path: circle(44.5% at 50% 50%);
+    animation: pulse 5s infinite;
+    -ms-animation: pulse 5s infinite;
+    -webkit-animation: pulse 5s infinite;
+}
+.logo {
+    width:100px;
+    height:100px;
+    margin:0 auto;
+}
+.login-div img {
+    width:100vw;
+    height:100vh;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, .15));
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    50% {
+        transform: scale(.95);
+        opacity: .03;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    } 
+}
